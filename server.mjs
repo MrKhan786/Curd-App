@@ -3,15 +3,14 @@ import morgan from 'morgan';
 import cors from "cors"; //jb sub domain se request ayye toh error ko overcome krne k lye
 
 const app = express()
-
-const port = process.env.PORT || 3000
-
-
-let users = [];
-
 app.use(cors())
 app.use(express.json())
 app.use(morgan('short'))
+
+const port = process.env.PORT || 3000
+let users = [];
+
+
 
 app.use((req, res, next) => {
   console.log("a request came", req.body);
@@ -79,13 +78,7 @@ app.delete('/user/:id', (req, res) => {
   }
 })
 
-app.get('/home', (req, res) => {
-  res.send('here is your home')
-})
-app.get('/', (req, res) => {
-  res.send('Hi I am a hello world Server program')
-})
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log("server is running")
 })
