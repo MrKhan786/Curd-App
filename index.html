@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Curd App</title>
+</head>
+<body>
+    <h1>Bio- Data of Students</h1>
+    <p>Name: <input type="text" placeholder="enter name" id="name"></p>
+    <p>E-mail: <input type="text" placeholder="enter e-mail" id="email"></p>
+    <p>Address: <input type="text" placeholder="enter address" id="address"></p>
+<input type="hidden" name="" id="student_id">
+    <button onclick="post_create()">Create</button>
+    <button onclick="get_all()">Get All Students</button>
+    <button onclick="update_student()">Update</button>
+    <button onclick="delete_student()">Delete</button>
+    <br> <br>
+    
+    <div>
+   
+<table>
+<thead>
+    <tr>
+        <th>Name</th>
+    <th>E-mail</th>
+    <th>Address</th>
+    </tr>
+
+</thead>
+<tbody id="tbpler">
+
+</tbody>
+</table>
+
+    </div>
+
+<script src="function.js">
+
+    </script>
+</body>
+</html>
